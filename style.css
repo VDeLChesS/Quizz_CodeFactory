@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --fs-900: 9rem;
+    --fs-600: 6rem;
+    --fs-400: 4rem;
+    --fs-300: 2rem;
+    --fs-200: 1.5rem;
+}
+
+*,
+* {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1 {
+    font-size: var(--fs-900);
+    font-family: 'fantasy';
+    font-weight: 700;
+    color: rgba(244, 242, 242, 0.8);
+    background-image: linear-gradient(to right, rgba(244, 242, 242, 0.2), rgba(244, 242, 242, 0.9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-rendering: optimizeLegibility;
+    flex-wrap: nowrap;
+}
+
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: var(--fs-600);
+        font-family: 'helvetica neue', sans-serif;
+        background-image: linear-gradient(to right, rgba(252, 251, 251, 1), rgba(252, 251, 251, 0.9), rgba(222, 220, 220, 0.85), rgba(111, 110, 110, 0.8), rgba(143, 137, 137, 0.863));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        justify-self: stretch;
+        flex-wrap: nowrap;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    [class*="col-"] {
+        height: 50%;
+    }
+
+    h1 {
+        font-size: var(--fs-900);
+        font-family: 'helvetica neue', sans-serif;
+        background-image: linear-gradient(to right, rgba(252, 251, 251, 0.8), rgba(252, 251, 251, 0.4), rgba(252, 251, 251, 0.9), rgba(222, 220, 220, 0.85), rgba(111, 110, 110, 0.8), rgba(143, 137, 137, 0.863), rgba(252, 251, 251, 0.5), rgba(252, 251, 251, 0.4), rgba(252, 251, 251, 0.8));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        justify-self: stretch;
+        flex-wrap: nowrap;
+    }
+
+    .container {
+        width: min(80%, 1000px);
+        height: 50%;
+        margin-inline: auto;
+        padding: none;
+    }
+
+    .col {
+        padding: 0;
+    }
+
+    #hidden1,
+    #hidden2 {
+        display: none;
+    }
+}
