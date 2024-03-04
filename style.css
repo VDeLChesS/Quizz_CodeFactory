@@ -4,77 +4,135 @@
     --fs-900: 9rem;
     --fs-600: 6rem;
     --fs-400: 4rem;
-    --fs-300: 2rem;
-    --fs-200: 1.5rem;
+    --fs-300: 3rem;
+    --fs-200: 2rem;
 }
 
-*,
-* {
+
+
+* ::before, * ::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-rendering: optimizeLegibility;
+    font-family: 'Open Sans', sans-serif;
 }
 
 header {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-}
-
-h1 {
-    font-size: var(--fs-900);
-    font-family: 'fantasy';
-    font-weight: 700;
-    color: rgba(244, 242, 242, 0.8);
-    background-image: linear-gradient(to right, rgba(244, 242, 242, 0.2), rgba(244, 242, 242, 0.9));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-rendering: optimizeLegibility;
+    background-image: repeating-linear-gradient(rgba(252, 251, 251, 0.9), rgba(252, 251, 251, 0.9), rgba(222, 220, 220, 0.85), rgba(111, 110, 110, 0.8), rgba(143, 137, 137, 0.863));
+    background-repeat: repeat-y;
     flex-wrap: nowrap;
+    
 }
 
-@media only screen and (max-width: 768px) {
+#gradient2 {
+    background-image: repeating-linear-gradient(rgba(252, 251, 251, 0.9), rgba(252, 251, 251, 0.9), rgba(222, 220, 220, 0.85), rgba(111, 110, 110, 0.8), rgba(143, 137, 137, 0.863), rgba(50, 49, 49, 0.08));
+    background-repeat: repeat-x;
+    background-position: center;
+
+    
+}
+
+
+
+@media only screen and (max-width: 600px) {
     [class*="col-"] {
         width: 100%;
     }
 
     h1 {
-        font-size: var(--fs-600);
-        font-family: 'helvetica neue', sans-serif;
-        background-image: linear-gradient(to right, rgba(252, 251, 251, 1), rgba(252, 251, 251, 0.9), rgba(222, 220, 220, 0.85), rgba(111, 110, 110, 0.8), rgba(143, 137, 137, 0.863));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        justify-self: stretch;
+        font-size: var(--fs-300);
+        font-family: fantasy;
+        font-weight: 300;
+        color: rgba(50, 49, 49, 0.08);
+        text-rendering: optimizeLegibility;
         flex-wrap: nowrap;
+    
+        
     }
+    
+
+    
+    
 }
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+
+  h1 {
+    font-size: var(--fs-600);
+    font-family: fantasy;
+    font-weight: 500;
+    color: rgba(50, 49, 49, 0.08);
+    text-rendering: optimizeLegibility;
+    flex-wrap: nowrap;
+
+    
+}  
 
 @media only screen and (min-width: 768px) {
     [class*="col-"] {
         height: 50%;
     }
 
-    h1 {
-        font-size: var(--fs-900);
-        font-family: 'helvetica neue', sans-serif;
-        background-image: linear-gradient(to right, rgba(252, 251, 251, 0.8), rgba(252, 251, 251, 0.4), rgba(252, 251, 251, 0.9), rgba(222, 220, 220, 0.85), rgba(111, 110, 110, 0.8), rgba(143, 137, 137, 0.863), rgba(252, 251, 251, 0.5), rgba(252, 251, 251, 0.4), rgba(252, 251, 251, 0.8));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        justify-self: stretch;
-        flex-wrap: nowrap;
-    }
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
 
-    .container {
-        width: min(80%, 1000px);
-        height: 50%;
-        margin-inline: auto;
-        padding: none;
-    }
+h1 {
+    font-size: var(--fs-900);
+    font-family: fantasy;
+    font-weight: 700;
+    color: rgba(50, 49, 49, 0.08);
+    text-rendering: optimizeLegibility;
+    flex-wrap: nowrap;
 
-    .col {
+    
+}
+
+
+.container {
+    width: min(80%, 1000px);
+    height: 50%;
+    margin-inline: auto;
+    padding: 0;
+}
+
+.col {
         padding: 0;
-    }
+}
 
-    #hidden1,
-    #hidden2 {
+#hidden1, #hidden2 {
         display: none;
     }
-}
+
